@@ -1,0 +1,57 @@
+.mytittel{
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg");
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mybtn{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin-top: 10px;
+    }
+
+.mybtn:hover{
+    border: 2px solid white;
+}
+
+.maycomment{
+    color: gray;
+}
+
+.wrap{
+    max-width: 1200px;
+    width:95%;
+    margin: 20px auto 0px auto;
+}
+
+.mypost{
+    max-width: 500px;
+    width: 95%;
+    margin: 20px auto 0 auto;
+    box-shadow: 0px 0px 3px 0px gray;
+    padding: 20px;
+}
+
+.mainbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.mainbtn > button{
+    margin-right: 10px;
+}
+
