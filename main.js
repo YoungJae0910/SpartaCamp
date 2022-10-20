@@ -372,4 +372,82 @@
 
 // }
 
-var name = confirm('유영재');
+// let myemail = 'dbdudwo126@gmail.com'
+
+// console.log(myemail.split('@'))
+// console.log(myemail.split('@')[1])
+// console.log(myemail.split('@')[1].split('.')[0])
+
+// function sum(a,b){
+//     console.log(a+b)
+//     return a+b
+// }
+// let result = sum(2,3)
+
+// function is_adult(age){
+//     if (age > 20){
+//         alert('성인입니다')
+//     } else {
+//         alert('애깁니다')
+//     }
+// }
+
+// let a_list = ['사과', '배', '딸기', '감']
+//     for (let i = 0; i < a_list.length; i++){
+//         console.log(a_list[1])
+// //     }
+
+// var number = [12, 34, 29, 129, 12];
+// var total_number = 0;
+//     for (let i=1; i<number.length+1; i++){
+//         total_number += number[i-1]
+
+//     console.log(total_number);
+
+// var first = 0;
+// while( first < 5 ){
+//     first++
+//     console.log(first)
+// }
+
+// var age = 21;
+// if( age > 20){
+//     console.log('성인이냐?')
+// } else {
+//     console.log('성인이아니냐?')
+// }
+
+// function solution( year ){
+//     if( year %4 == 0){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+let total_scores = 0;
+let scores = [
+        {'name':'철수', 'score':90},
+        {'name':'영희', 'score':85},
+        {'name':'민수', 'score':70},
+    {'name':'형준', 'score':50},
+    {'name':'기남', 'score':68},
+    {'name':'동희', 'score':30},
+]
+
+// console.log(scores.length);
+
+for (let i = 0; i < scores.length; i++){
+    // if(scores[i]['score'] <= 70){
+    console.log(scores[i]['score']);
+    // }
+}
+
+for (let i = 5; i >= 0; i--){
+    total_scores += scores[i]['score'];
+}
+console.log(total_scores);
+// var number = [12, 34, 29, 129, 12];
+// var total_number = 0;
+//     for (let i=1; i<number.length+1; i++){
+//         total_number += number[i-1]
+//     }
