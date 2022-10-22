@@ -41,6 +41,7 @@
     margin: 20px auto 0 auto;
     box-shadow: 0px 0px 3px 0px gray;
     padding: 20px;
+    display: none;
 }
 
 .mainbtn{

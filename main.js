@@ -424,30 +424,81 @@
 //         return false;
 //     }
 // }
-let total_scores = 0;
-let scores = [
-        {'name':'철수', 'score':90},
-        {'name':'영희', 'score':85},
-        {'name':'민수', 'score':70},
-    {'name':'형준', 'score':50},
-    {'name':'기남', 'score':68},
-    {'name':'동희', 'score':30},
-]
+// let total_scores = 0;
+// let scores = [
+//         {'name':'철수', 'score':90},
+//         {'name':'영희', 'score':85},
+//         {'name':'민수', 'score':70},
+//     {'name':'형준', 'score':50},
+//     {'name':'기남', 'score':68},
+//     {'name':'동희', 'score':30},
+// ]
 
-// console.log(scores.length);
 
-for (let i = 0; i < scores.length; i++){
-    // if(scores[i]['score'] <= 70){
-    console.log(scores[i]['score']);
-    // }
-}
+// for (let i = 0; i < scores.length; i++){
+//     console.log(scores[i]['score']);
+// }
 
-for (let i = 5; i >= 0; i--){
-    total_scores += scores[i]['score'];
-}
-console.log(total_scores);
+
+// for (let i = 5; i >= 0; i--){
+//     total_scores += scores[i]['score'];
+// }
+// console.log(total_scores);
+
+
 // var number = [12, 34, 29, 129, 12];
 // var total_number = 0;
 //     for (let i=1; i<number.length+1; i++){
 //         total_number += number[i-1]
 //     }
+
+// let myname = [{'name':'youngjae', 'age':'30'},
+//         {'name':'minsu', 'age':'30'}];
+// console.log(myname[1]);
+
+var i = 10;
+
+if ( i < 5 ) {
+    console.log("true");
+} else if ( i > 7 ){
+    console.log("true");
+} else {
+    console.log("false");
+}
+
+// let count = 0;
+
+// function hey(){
+//     count += 1
+//     if (count % 2 == 0){
+//         alert("짝수입니다");
+//     } else {
+//         alert("홀수입니다");
+//     }
+// }
+
+// $('#url').var();
+// $('#postbox').hide();
+
+$.ajax({
+    type: "GET",
+    url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
+    data: {},
+    success: function(response){
+        let rows = [RealtimeCityAir]["row"]
+        for (let i = 0; i < rows.length; i++){
+            let gu_name = rows[i]['MSRSTE_NM']
+            let gu_mise = rows[i]['IDEX_MVL']
+            console.log(gu_name, gu_mise);
+        }
+    console.log(response)[RealtimeCityAir]["row"]
+    }
+})
+
+function open_box(){
+    $(`#postbox`).show();
+}
+
+function close_box(){
+    $(`#postbox`).hide();
+}

@@ -1,0 +1,123 @@
+jQuery는
+html의 요소들을 조작하는 편리한 js를 미리 작성해둔것이다 (라이브러리)
+
+input 박스의 값을 가져와보자
+url의 값을 가져올것이라면 
+url에있는 요소를 지칭해줘야한다
+css 에서는 class로 지정했던것을 jQuery에서는 id로 지정해준다
+
+function open_box(){
+    $(`#postbox`).show();
+}
+function으로 open_box라는 함수를 지정해준다
+그안에는 $(`#postbox`) = (html 에서 id로지정한 postbox)를
+.show() = (jQuery에서 보이게하는 기능)을 실행되게한다
+
+postbox는 html상에서 id로 지정을해주어야하며
+script안에서는 백틱(``)으로 감싸줘서 사용한다
+
+function close_box(){
+    $(`#postbox`).hide();
+}
+
+위내용과동일하지만 .hide로 html상의 id : postbox를 숨긴다
+
+css에서 display : none으로 지정해준다면
+첫페이지에서 보이지않는다 참고!
+
+---===============================================
+
+입력한값을 출력하기 
+중요! 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+이거 안붙이면 백날 코드쳐봐야 소용없는게 jquery 씨부래
+
+ <div class="question-box">
+        <h2>1. 빈칸 체크 함수 만들기</h2>
+        <h5>1-1. 버튼을 눌렀을 때 입력한 글자로 얼럿 띄우기</h5>
+        <h5>[완성본]1-2. 버튼을 눌렀을 때 칸에 아무것도 없으면 "입력하세요!" 얼럿 띄우기</h5>
+        <input id="input-q1" type="text" /> <button onclick="q1()">클릭</button>
+    </div>
+
+    위문제를풀어보자 id값은 input-q1 이고 버튼에지정된 함수는q1 이다
+    입력된값을 얼럿으로 보내고 입력이되지않았다면 얼럿으로 입력하라고 를 출력하자
+
+    function q1 (){ alert(1); }
+    먼저 q1에 함수가 잘들어가는지확인
+
+    function q1 (){                     // onclick으로 지정해준 q1에 함수를 지정한다
+        let a = $(`#input-q1`).val(); //id값 a = inupt으로 들어오는값이다
+        if( a == ''){                //만약에 a에 입력되는값이없으면
+            alert("입력해야지!")       //입력해야지!를 얼럿으로표기
+        } else {                    //그렇지않다면
+            alert(a);               //a에 입력된값을 표기!
+        }          
+    }
+
+    <div class="question-box">
+        <h2>2. 이메일 판별 함수 만들기</h2>
+        <h5>2-1. 버튼을 눌렀을 때 입력받은 이메일로 얼럿 띄우기</h5>
+        <h5>2-2. 이메일이 아니면(@가 없으면) '이메일이 아닙니다'라는 얼럿 띄우기</h5>
+        <h5>[완성본]2-3. 이메일 도메인만 얼럿 띄우기</h5>
+        <input id="input-q2" type="text" /> <button onclick="q2()">클릭</button>
+    </div>
+
+
+    function q2() {                                    //  onclick으로 지정해준 q2함수를 지정한다
+    let mail = $(`#input-q2`).val();                    // id값 mail =input으로 들어오는 값이다
+    if (mail.includes('@')){                            // mail 로들어온 input값안에 .includes로 '@' 가 들어있는지검사
+        let dot = mail.split('@')[1];                //   dot = 메일에서 .split('@') 으로 분리된부분(12123)(gmail.com)중 [1]번을선택
+        let domain = dot.split('.')[0];               //  domain = dot으로 선언된 gmail.com 에서 .split('.')으로 분리된(gmail)(com)중 [0]번을선택
+        alert(domain);                              // 얼럿창으로 (domain) 을 출력
+    } else {                                            // 그렇지않다면
+        alert("이메일이아니야!");                           // 얼럿창으로 ("이메일이아니야!") 출력
+    }
+
+ <div class="question-box">
+        <h2>2. 이메일 판별 함수 만들기</h2>
+        <h5>2-1. 버튼을 눌렀을 때 입력받은 이메일로 얼럿 띄우기</h5>
+        <h5>2-2. 이메일이 아니면(@가 없으면) '이메일이 아닙니다'라는 얼럿 띄우기</h5>
+        <h5>[완성본]2-3. 이메일 도메인만 얼럿 띄우기</h5>
+        <input id="input-q2" type="text" /> <button onclick="q2()">클릭</button>
+
+ function q3() {
+            // 1. input-q3 값을 가져온다. let txt = ... q1, q2에서 했던 걸 참고!
+            // 2. 가져온 값을 이용해 names-q3에 붙일 태그를 만든다. (let temp_html = `<li>${txt}</li>`) 요렇게!
+            // 3. 만들어둔 temp_html을 names-q3에 붙인다.(jQuery의 $('...').append(temp_html)을 이용하면 굿!)
+        }
+
+        function q3_remove() {
+            // 1. names-q3의 내부 태그를 모두 비운다.(jQuery의 $('....').empty()를 이용하면 굿!)
+        }
+
+<div class="question-box">
+        <h2>3. HTML 붙이기/지우기 연습</h2>
+        <h5>3-1. 이름을 입력하면 아래 나오게 하기</h5>
+        <h5>[완성본]3-2. 다지우기 버튼을 만들기</h5>
+        <input id="input-q3" type="text" placeholder="여기에 이름을 입력" />
+        <button onclick="q3()">이름 붙이기</button>
+        <button onclick="q3_remove()">다지우기</button>
+        <ul id="names-q3">
+            <li>세종대왕</li>
+            <li>임꺽정</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

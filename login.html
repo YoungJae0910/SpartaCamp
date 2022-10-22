@@ -18,11 +18,11 @@
 <body>
     <div class="mytittel">
         <h1>내생에 최고의 영화들</h1>
-        <button onclick="hey()" class="mybtn">영화기록하기</button>
+        <button onclick="open_box()" class="mybtn">영화기록하기</button>
     </div>
-    <div class="mypost">
+    <div class="mypost" id="postbox">
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control" placeholder="name@example.com">
             <label for="floatingInput">URL</label>
         </div>
 
@@ -46,12 +46,12 @@
 
         <div class="mainbtn" >
             <button type="button" class="btn btn-dark">기록하기</button>
-            <button type="button" class="btn btn-light">닫기</button>
+            <button type="button" class="btn btn-light" onclick="close_box()">닫기</button>
         </div>
 
     </div>
     <div class="wrap">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div id="cardbox" class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100">
                     <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg" class="card-img-top" alt="...">
