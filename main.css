@@ -1,58 +1,68 @@
-.mytittel{
+* {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.mytitle {
     width: 100%;
     height: 250px;
+
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg");
+
     color: white;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.mybtn{
+.mytitle > button {
     width: 200px;
     height: 50px;
+
     background-color: transparent;
     color: white;
+
     border-radius: 50px;
     border: 1px solid white;
-    margin-top: 10px;
-    }
 
-.mybtn:hover{
+    margin-top: 10px;
+}
+
+.mytitle > button:hover {
     border: 2px solid white;
 }
 
-.maycomment{
+.mycomment {
     color: gray;
 }
 
-.wrap{
-    max-width: 1200px;
-    width:95%;
+.mycards {
     margin: 20px auto 0px auto;
+    width: 95%;
+    max-width: 1200px;
 }
 
-.mypost{
-    max-width: 500px;
+.mypost {
     width: 95%;
-    margin: 20px auto 0 auto;
-    box-shadow: 0px 0px 3px 0px gray;
+    max-width: 500px;
+    margin: 20px auto 0px auto;
     padding: 20px;
+    box-shadow: 0px 0px 3px 0px gray;
+
     display: none;
 }
 
-.mainbtn{
+.mybtns {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    margin: 10px;
-    padding: 10px;
-}
+    justify-content: center;
 
-.mainbtn > button{
+    margin-top: 20px;
+}
+.mybtns > button {
     margin-right: 10px;
 }
-

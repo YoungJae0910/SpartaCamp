@@ -456,15 +456,15 @@
 //         {'name':'minsu', 'age':'30'}];
 // console.log(myname[1]);
 
-var i = 10;
+// var i = 10;
 
-if ( i < 5 ) {
-    console.log("true");
-} else if ( i > 7 ){
-    console.log("true");
-} else {
-    console.log("false");
-}
+// if ( i < 5 ) {
+//     console.log("true");
+// } else if ( i > 7 ){
+//     console.log("true");
+// } else {
+//     console.log("false");
+// }
 
 // let count = 0;
 
@@ -480,20 +480,39 @@ if ( i < 5 ) {
 // $('#url').var();
 // $('#postbox').hide();
 
-$.ajax({
-    type: "GET",
-    url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
-    data: {},
-    success: function(response){
-        let rows = [RealtimeCityAir]["row"]
-        for (let i = 0; i < rows.length; i++){
-            let gu_name = rows[i]['MSRSTE_NM']
-            let gu_mise = rows[i]['IDEX_MVL']
-            console.log(gu_name, gu_mise);
+// $.ajax({
+//     type: "GET",
+//     url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
+//     data: {},
+//     success: function(response){
+//         let rows = [RealtimeCityAir]["row"]
+//         for (let i = 0; i < rows.length; i++){
+//             let gu_name = rows[i]['MSRSTE_NM']
+//             let gu_mise = rows[i]['IDEX_MVL']
+//             console.log(gu_name, gu_mise);
+//         }
+//     console.log(response)[RealtimeCityAir]["row"]
+//     }
+// })
+
+
+$(document).ready(function(){
+    listing();
+    });
+
+function listing(){
+    $.ajax({
+        type: "GET",
+        url: "http://spartacodingclub.shop/static/images/rtans/SpartaIcon01.png",
+        data: {},
+        success: function(response){
+            let rows = response['movies']
+            console.log(rows)
         }
-    console.log(response)[RealtimeCityAir]["row"]
+    })
     }
-})
+        
+    
 
 function open_box(){
     $(`#postbox`).show();
@@ -502,3 +521,4 @@ function open_box(){
 function close_box(){
     $(`#postbox`).hide();
 }
+

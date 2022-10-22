@@ -8,8 +8,9 @@ $.ajax({
     url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
     data: {},
     success: function(response){
-        let temp = response[`temp`];
+        let temp = response['temp'];
         $(`#temp`).text(temp);
     }
 })
 }
+
