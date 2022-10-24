@@ -74,10 +74,3 @@
 // </div>
 
 
-var fruits = ['사과','배','배','감','수박','귤','딸기','사과','배','수박'];
-var count = 0;
-for (var i = 0; i < fruits.length['사과']; i++) {
-    count += 1
-}
-
-console.log(count);
