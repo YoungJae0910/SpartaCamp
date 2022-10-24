@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function hey() {
+            $.ajax({
+                type: "POST",
+                url: "/test",
+                data: { title_give:'봄날은간다' },
+                success: function(response){
+                console.log(response['msg'])
+            }
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1>나의첫 웹페이지</h1>
+    <button onclick="hey()">버튼을만들자</button>
+</body>
+</html>
