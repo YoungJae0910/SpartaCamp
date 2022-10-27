@@ -50,7 +50,7 @@
     slides = getSlides();
     if (index >= slides.length - 1) return;
     index++;
-    slide.style.transition = '1.5s ease-out';
+    slide.style.transition = '3s ease-out';
     slide.style.transform = `translateX(${-slideWidth * index}px)`;
     };
 

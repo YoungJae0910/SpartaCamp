@@ -57,15 +57,16 @@ a{
 
 .main_back{
     margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 110px;
+    margin-right: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 30px;
-    width: 1600px;
+    width: auto;
     height: 700px;
-    background-color:rgb(245, 240, 240, 0.1)
+    background-color:rgb(245, 240, 240, 0.1);
+    overflow: hidden;
 }
 
 
@@ -79,10 +80,10 @@ a{
 
 .container{
     margin: 100px auto;
-    width: 900px;
+    width: 1150px;
     height: 700px;
     /* position: relative; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .slides{
@@ -92,9 +93,8 @@ a{
 
 .slide{
     display: flex;
-    min-width: 70%;
+    min-width: 50%;
     position: relative;
-    /* padding: 18px */
     color: white;
 }
 
