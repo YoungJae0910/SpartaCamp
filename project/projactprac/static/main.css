@@ -1,9 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+
 body{
-    height: 100vh;
-    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/3.jpeg');
+    width: 100%;
+    max-height: 800px;
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/static/3.jpeg');
     background-size: cover;
     position: relative;
 }
+
+
 
 a{
     text-decoration: none;
@@ -66,65 +74,70 @@ a{
     width: auto;
     height: 700px;
     background-color:rgb(245, 240, 240, 0.1);
-    overflow: hidden;
-}
-
-
-/* -------------------------------------- */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-}
-
-.container{
-    margin: 100px auto;
-    width: 1150px;
-    height: 700px;
-    /* position: relative; */
     /* overflow: hidden; */
 }
 
-.slides{
+/* --------------------- */
+
+.container{
     display: flex;
-    height: 100%;
+    width: 1100px;
+    height: 600px;
+    /* overflow: hidden; */
 }
 
-.slide{
+.subcontainer{
     display: flex;
-    min-width: 50%;
-    position: relative;
+    width:500vh;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 600px;
+}
+
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px;
+    height: 600px;
+}
+
+
+
+.card__face img{
+    width: 400px;
+    height: 600px;
+    border-radius: 30px;
+    box-shadow: 0px 3px 18px 3px rgb(243, 241, 241, 0.4)
+}
+.read{
+    margin-left: 30px ;
+    padding-left: 30px;
+    padding-right: 30px;
     color: white;
+    width: 400px;
+    border-radius: 30px;
+    box-shadow: 0px 3px 18px 3px rgb(243, 241, 241, 0.4)
+}
+.text{
+    font-family: 'Gamja Flower', cursive;
+    font-family: 'Island Moments', cursive;
+
+    width: 400px;
+    padding-top: 30px;   
 }
 
-.slide img{
-    margin-top: 35px;
-    width: 90%;
-    height: 90%;
-    border-radius: 60px; 
+.text_제목{
+    font-size: xx-large;
 }
 
-.slide-controls{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.text_sub제목{
+    font-size: x-large;
 }
-
-#next-btn, #prev-btn{
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 30px;
-    border: none;
-    padding: 100px;
-    color: white;
-}
-
-#next-btn:focus, #prev-btn:focus{
-    outline: none;
+.text_문단{
+    text-align: left;
 }
