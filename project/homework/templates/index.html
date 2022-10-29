@@ -23,6 +23,8 @@
         * {
             font-family: 'Noto Serif KR', serif;
         }
+
+
         .mypic {
             width: 100%;
             height: 300px;
@@ -75,10 +77,29 @@
             url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
             data: {},
             success: function (response) {
-                $('#temp').text(response['temp'])
+
+                let a = JSON.stringify(response['temp']);
+                console.log(a);
+                console.log(typeof a);
+                //
+                // console.log(a.split('.')[0]);
+                // console.log(a.split('.')[1]);
+
+                let a1 = a.split('.')[0]
+                let a2 = a.split('.')[1]
+
+                let test = a1 + `\n`  +  a2
+                $('#temp').text(test);
+                // $('#temp').text(response['temp'])
+                // console.log(typeof  $('#temp').text(response['temp']));
+
+                // console.log($('#temp').text(response['temp']));
+                // let a = response.text.split(0, 2);
+                // console.log(a);
             }
         })
     }
+
 
         function save_comment() {
             let name = $('#name').val()
@@ -151,7 +172,7 @@
 <body>
     <div class="mypic">
         <h1>Sting 방명록</h1>
-        <p>현재기온: <span id="temp">36</span>도</p>
+        <p>현재기온: <span id="temp" class="temp"></span>도</p>
     </div>
     <div class="mypost">
         <div class="form-floating mb-3">
