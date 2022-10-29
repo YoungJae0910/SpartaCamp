@@ -5,7 +5,8 @@
 
 body{
     width: 100%;
-    max-height: 800px;
+    height: 100vh;
+    /* max-height: 800px; */
     background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/static/3.jpeg');
     background-size: cover;
     position: relative;
@@ -81,7 +82,9 @@ a{
 
 .container{
     display: flex;
-    width: 1100px;
+    width: 100%;
+    max-width: 1100px;
+    /* width: 1100px; */
     height: 600px;
     /* overflow: hidden; */
 }
@@ -126,7 +129,7 @@ a{
 .text{
     font-family: 'Gamja Flower', cursive;
     font-family: 'Island Moments', cursive;
-
+    color: white;
     width: 400px;
     padding-top: 30px;   
 }
@@ -137,7 +140,10 @@ a{
 
 .text_sub제목{
     font-size: x-large;
+    margin-bottom: 10px;
 }
 .text_문단{
     text-align: left;
+    margin-bottom: 30px;
 }
+
