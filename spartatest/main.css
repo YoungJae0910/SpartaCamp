@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: gray;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
+}
+
+nav .logo{
+    color: blue;
+    font-weight: 800;
+    padding-left: 1rem;
+    cursor: pointer;
+    font-size: 1.9rem;
+}
+
+nav ul{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+}
+
+.menu{
+    position: relative;
+}
+
+.ani-menu{
+    display: grid;
+    grid-auto-flow: row;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-3em);
+    -webkit-transform: translateY(-3em);
+    -moz-transform: translateY(-3em);
+    -ms-transform: translateY(-3em);
+    -o-transform: translateY(-3em);
+    z-index: -1;
+    transition: all 0.3s ease 0s,
+    visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
+    background: white;
+}
+
+/* hover */
+.menu:focus .ani-menu,
+.menu:focus-within .ani-menu,
+.menu:hover .ani-menu {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transition-delay: 0s, 0s, 0.3s;
+}
+
+nav a{
+    color: #262626;
+    display: block;
+    padding: 15px 60px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.ani-menu a{
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.ani-menu a :hover,
+.ani-menu a :focus{
+    background: blue;
+    color: white;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+nav ul, nav ul li{
+    list-style-type: none;
+
+}
+
+nav > ul > li{
+    margin: 0.5rem .5rem 0 .5rem;
+    padding-bottom: .5rem;
+}
+
+nav >ul li a:hover,
+nav >ul li a:focus,
+nav >ul li a:focus-within{
+    background: blue;
+    color: white;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+
+
+

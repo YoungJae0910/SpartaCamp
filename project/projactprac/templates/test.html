@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a = prompt("동물의 이름을 입력하시요");
+        // if (a == "강아지"){
+        //             alert("멍멍");
+        //     } else if (a == "고양이"){
+        //             alert("야옹");
+        //     } else if (a == "오리"){
+        //             alert("꽥");
+        //     } else {
+        //             alert("강아지나 고양이나 오리중 선택하시오...")
+        //     }
+        // switch(a){
+        //     case "강아지" : alert("멍"); break;
+        //     case "고양이" : alert("냥"); break;
+        //     case "오리" : alert("꽥"); break;
+        //     default : alert("강아지나 고양이나 오리중 선택하시오...")
+        // }
+
+        let weight = prompt("체중");
+        let height = prompt("신장");
+
+        let a = (height-100)*0.9
+        let bmi = weight / a *100
+        
+        if (bmi >= 90){
+            alert(체중부족);
+        } else if (bmi >= 110){
+            alert(정상);
+        } else if (bmi >= 120){
+            alert(체중과다);
+        } else if (bmi >130){
+            alert(비만);
+        }
+    </script>
+</body>
+
+</html>

@@ -73,31 +73,19 @@
 
         function set_temp(){
         $.ajax({
-            type: "GET",
-            url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
-            data: {},
-            success: function (response) {
-
-                let a = JSON.stringify(response['temp']);
-                console.log(a);
-                console.log(typeof a);
-                //
-                // console.log(a.split('.')[0]);
-                // console.log(a.split('.')[1]);
-
-                let a1 = a.split('.')[0]
-                let a2 = a.split('.')[1]
-
-                let test = a1 + `\n`  +  a2
-                $('#temp').text(test);
-                // $('#temp').text(response['temp'])
-                // console.log(typeof  $('#temp').text(response['temp']));
-
-                // console.log($('#temp').text(response['temp']));
-                // let a = response.text.split(0, 2);
-                // console.log(a);
-            }
-        })
+                        type: "GET",
+                        url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+                data: {},
+                success: function (response) {
+                    let a = JSON.stringify(response['temp']);
+                    console.log(a);
+                    console.log(typeof a);
+                    let a1 = a.split('.')[0]
+                    let a2 = a.split('.')[1]
+                    let test = `${a1} <br/> ${a2}`
+                    $('#temp').append(test);
+                }
+            })
     }
 
 
